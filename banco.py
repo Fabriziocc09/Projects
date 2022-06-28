@@ -6,7 +6,7 @@ userkey = int(input())
 if userkey == key :
     print("------------------")
     print("What does you want to do : ")
-    listabc = ["Transfer" ,"or" , "Withdrawal"]
+    listabc = ["Transfer" , "Withdrawal"]
     for e in listabc :
         print(e)
     print("------------------")
@@ -14,7 +14,7 @@ if userkey == key :
     what2do = str(input())
     print("------------------")
     if what2do == "transfer":
-        listatr = ["Interbank", "or", "Our bank"]
+        listatr = [ "ourbank", "interbank"]
         for p in listatr:
             print(p)
         print("-------------------")
@@ -32,14 +32,19 @@ if userkey == key :
             print("The transfer has been completed with a transferred amount of", trmoney, "soles to", accountNumber,
                   "account number")
 
-        if bankorintbank == "our bank":
+        if bankorintbank == "ourbank":
             print("insert the account number (9 characters ):")
             accountournum = str(input())
-            print("-------------------")
-            print("How much money you will like to transfer?")
-            trmn = str(input())
-            print("-------------------")
-            print("the money has bean transfer to ", accountournum, "with a amount of money of", trmn, "soles")
+            sizenum = len(accountournum)
+            if sizenum == 9 :
+                print("-------------------")
+                print("How much money you will like to transfer?")
+                trmn = str(input())
+                print("-------------------")
+                print("the money has bean transfer to ", accountournum, "with a amount of money of", trmn, "soles")
+            else:
+                print("-------------------")
+                print("invalid account number!")
 
     if what2do == "withdrawal":
         print("Enter the amount to withdraw :")
@@ -52,8 +57,3 @@ if userkey == key :
 
 else :
     print("Im sorry the passwords doesn´t match")
-
-
-
-
-
