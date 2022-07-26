@@ -1,5 +1,5 @@
 from tkinter import  *
-
+##install tkinter
 calculadora =Tk()
 
 calculadora.title("Calculadora")
